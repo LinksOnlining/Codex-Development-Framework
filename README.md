@@ -1,11 +1,11 @@
-# TestProject
+# AI Project Template
 
 TypeScript 项目骨架，同时提供**库**和**命令行**两种入口。
 
 本项目有两个目标：
 
 1. 承载实际业务逻辑，长期维护。
-2. 固化一套可复用的工程规范（构建、检查、测试、发布），后续沉淀为 `Templates/typescript-cli`。
+2. 固化一套可复用的工程规范（构建、检查、测试、发布），后续沉淀为 `AI Project Template/typescript-cli`。
 
 生产依赖数量目标为 **0**，开发依赖保持在最小集合。
 
@@ -26,6 +26,35 @@ TypeScript 项目骨架，同时提供**库**和**命令行**两种入口。
 | 格式化   | Prettier                                   |
 
 ---
+## AI协作开发流程
+
+本项目使用：
+
+ChatGPT：
+需求分析、方案设计、任务拆解
+
+Claude：
+架构设计、代码审查
+
+Codex：
+代码实现、测试修复
+
+
+开发流程：
+
+需求
+↓
+方案
+↓
+架构
+↓
+编码
+↓
+审核
+↓
+修复
+↓
+验收
 
 ## 快速开始
 
@@ -50,13 +79,13 @@ npm run verify
 ```bash
 # 本地链接后使用
 npm link
-testproject --help
+AI Project Template --help
 ```
 
 ### 作为库使用
 
 ```ts
-import { executeApplication, type AppConfig, type ApplicationInput } from "testproject";
+import { executeApplication, type AppConfig, type ApplicationInput } from "AI Project Template";
 
 const config: AppConfig = {
   name: "demo",
@@ -95,7 +124,7 @@ const result = executeApplication(config, input);
 ## 目录结构
 
 ```
-TestProject/
+AI Project Template/
 ├── README.md               本文件
 ├── CHANGELOG.md            版本变更记录，人工维护
 ├── LICENSE

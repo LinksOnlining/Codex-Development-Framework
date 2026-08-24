@@ -1,5 +1,5 @@
 {
-  "name": "testproject",
+  "name": "ai-project-template",
   "version": "0.1.0",
   "description": "A minimal TypeScript library and CLI template.",
   "type": "module",
