@@ -1,0 +1,5 @@
+{
+  "name": "example",
+  "logLevel": "info",
+  "maxRetries": 3
+}

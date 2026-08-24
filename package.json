@@ -1,0 +1,41 @@
+{
+  "name": "testproject",
+  "version": "0.1.0",
+  "description": "A minimal TypeScript library and CLI template.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24.2.0"
+  },
+  "bin": {
+    "testproject": "./dist/cli/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "test": "npm run build && node --test \"tests/**/*.test.ts\"",
+    "test:unit": "node --test \"tests/unit/**/*.test.ts\"",
+    "test:integration": "npm run build && node --test \"tests/integration/**/*.test.ts\"",
+    "test:arch": "node --test \"tests/architecture/**/*.test.ts\"",
+    "test:coverage": "npm run build && node --experimental-test-coverage --test \"tests/**/*.test.ts\"",
+    "verify": "npm run typecheck && npm run lint && npm run format:check && npm test",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "eslint": "9.34.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.42.0"
+  }
+}
