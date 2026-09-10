@@ -4,6 +4,11 @@
 
 ## Goal
 
+## Delivery Target
+
+- Type:
+- Completeness Requirements:
+
 ## Target Users
 
 ## Core Scenarios

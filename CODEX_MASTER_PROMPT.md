@@ -6,7 +6,7 @@
 
 本文件是中央方法论的入口和索引。详细规则以 `rules/` 中对应主题为单一事实来源；项目事实以项目自己的文档为准。不要把本文件复制到项目中。
 
-规则冲突时，依次服从：用户当前明确要求、已确认的 `PROJECT_BRIEF.md`、项目级 `AGENTS.md` / `CODEX.md`、工作区规则、中央规则。冲突会显著改变产品行为、架构或验收结果时，先询问用户。
+规则冲突时，依次服从：用户当前明确要求、已确认的 `PROJECT_BRIEF.md`、Acceptance Criteria / Delivery Target、安全与数据完整性、风险等级要求的必要验证、项目架构和项目级规则、工作区与中央规则、Ponytail 实现优化、Token / 时间优化。冲突会显著改变产品行为、架构或验收结果时，先询问用户。
 
 ## 不可省略的门禁
 
@@ -19,7 +19,7 @@
 
 ## 标准项目生命周期
 
-1. 需求：访谈、澄清、确认，写入 `PROJECT_BRIEF.md`。
+1. 需求：访谈、澄清并确认 Delivery Target，写入 `PROJECT_BRIEF.md`。
 2. 初始化：按需读取模板，创建独立项目和最小必要结构。
 3. 设计：只为当前阶段做足够设计，重大选择请求用户确认。
 4. 实现：按 FAST / STANDARD / DEEP 选择强度，以 Task Batch 推进。
@@ -33,7 +33,7 @@
 | --- | --- |
 | 新项目访谈、95% 门禁、需求变更 | `rules/REQUIREMENTS.md` |
 | 最小上下文、diff-first、Token 控制 | `rules/CONTEXT.md` |
-| 初始化、开发模式、Task Batch、技术决策 | `rules/DEVELOPMENT.md` |
+| 初始化、开发模式、Task Batch、技术决策、Ponytail 调用契约 | `rules/DEVELOPMENT.md` |
 | 风险分级测试、回归和 PASS 门禁 | `rules/TESTING.md` |
 | 错误定位与逐级扩大排查 | `rules/DEBUGGING.md` |
 | checkpoint、milestone、提交 | `rules/GIT.md` |

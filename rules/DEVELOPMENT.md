@@ -50,6 +50,14 @@
 
 重大产品或架构决策按 `rules/SAFETY.md` 请求用户决定。
 
+## Ponytail Skill Invocation Contract
+
+Ponytail 是可选的实现优化器，不是需求范围决定者。只有当前任务的需求、Must Have、Acceptance Criteria 和 Delivery Target 已明确时才可调用；否则返回需求澄清流程。用户当前已确认要求与 `PROJECT_BRIEF.md` 决定必须实现什么，Ponytail 只能优化如何实现。
+
+Ponytail 可以降低不必要的代码、重复、抽象、依赖和实现复杂度，但不得以最小化、YAGNI、Token 或速度为由删除、延期、降级或质疑已确认的 Must Have。必要的错误处理、安全、数据完整性、迁移、兼容性和风险等级要求的验证不得削弱。
+
+这里的 minimum 是 **minimum sufficient implementation**：完整满足所有已确认需求后的最小充分实现，不等于最少功能、MVP、Demo、Prototype 或最少代码行数。若 Ponytail 输出冲突，依次以用户当前明确要求、`PROJECT_BRIEF.md`、Acceptance Criteria / Delivery Target、安全与数据完整性、必要验证、项目架构和项目级规则为准。
+
 ## 大阶段门禁
 
 大阶段结束时执行必要测试与回归、工程自检、问题修复、再次验证、必要文档同步和 Git milestone；简要汇报后等待用户确认，再进入下一大阶段。
