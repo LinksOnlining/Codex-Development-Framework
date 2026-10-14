@@ -5,6 +5,24 @@
 
 本目录是所有软件项目共用的只读规范库与文档模板库，不是可直接开发或整目录复制的项目骨架。
 
+# Documentation
+
+详细文档：
+
+- [系统架构](docs/architecture.md)
+- [开发工作流程](docs/workflow.md)
+
+这些文档介绍框架设计理念、核心组件关系以及推荐的软件开发流程。
+
+# Quick Links
+
+- [总控规范](CODEX_MASTER_PROMPT.md)
+- [开发规则](rules/)
+- [项目模板](templates/)
+- [示例项目](examples/sample-project/)
+- [系统架构](docs/architecture.md)
+- [开发流程](docs/workflow.md)
+
 ## 使用方式
 
 新项目由工作区规则触发需求访谈。需求达到约 95% 理解把握并经用户确认后，Codex 才能：
