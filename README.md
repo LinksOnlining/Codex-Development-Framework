@@ -34,6 +34,101 @@
 
 已有项目优先读取项目自己的 `AGENTS.md`、`PROJECT_BRIEF.md`、`PROJECT_STATUS.md`，再检查 `git status`、`git diff` 和当前任务相关文件。普通任务不得默认全文读取 `CODEX_MASTER_PROMPT.md` 或本库全部文件。
 
+## 快速开始
+
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/LinksOnlining/Codex-Development-Framework.git
+```
+
+进入目录：
+
+```bash
+cd Codex-Development-Framework
+```
+
+---
+
+### 2. 阅读核心规范
+
+首先阅读：
+
+```
+CODEX_MASTER_PROMPT.md
+```
+
+了解：
+
+- AI Agent 工作方式
+- 规则系统
+- 软件开发流程
+
+---
+
+### 3. 查看开发规则
+
+进入：
+
+```
+rules/
+```
+
+根据需求读取对应规则：
+
+- 需求分析 → `REQUIREMENTS.md`
+- 开发流程 → `DEVELOPMENT.md`
+- 测试验证 → `TESTING.md`
+- 安全规范 → `SAFETY.md`
+
+---
+
+### 4. 创建新项目
+
+使用：
+
+```
+templates/
+```
+
+中的模板创建项目文档：
+
+```
+AGENTS.md
+
+PROJECT_BRIEF.md
+
+PROJECT_STATUS.md
+```
+
+---
+
+### 5. 开始 AI 辅助开发
+
+将项目上下文、规则和文档提供给 AI Agent。
+
+推荐流程：
+
+```
+Context
+
+↓
+
+Rules
+
+↓
+
+Planning
+
+↓
+
+Implementation
+
+↓
+
+Verification
+```
+
 ## 目录
 
 ```text
@@ -51,6 +146,89 @@ AI_Project_Template/
 - `PROJECT_BRIEF.md` 与 `PROJECT_STATUS.md` 是项目启动时的首要上下文。
 - `DESIGN.md`、`README.md`、`CHANGELOG.md`、项目级 `CODEX.md` 和中央 `rules/` 均按任务需要读取。
 - `CODEX_MASTER_PROMPT.md` 仅用于规则不明确、新的大阶段、复杂决策、重大架构变化、高风险修改或全面审查。
+
+## 系统架构
+
+Codex Development Framework 通过分层结构帮助 AI Agent 参与软件工程流程。
+
+```mermaid
+graph TD
+
+A[AI Agent<br/>Codex / ChatGPT / Claude / Cursor]
+
+B[CODEX_MASTER_PROMPT.md<br/>中央开发规范入口]
+
+C[rules/<br/>工程规则系统]
+
+D[templates/<br/>项目模板系统]
+
+E[Software Projects<br/>实际开发项目]
+
+A --> B
+B --> C
+C --> D
+D --> E
+```
+
+### 架构说明
+
+- **CODEX_MASTER_PROMPT.md**
+  - AI Agent 工作流程入口
+  - 规则路由和方法论定义
+
+- **rules/**
+  - 存储开发规范
+  - 包括需求、开发、测试、安全等规则
+
+- **templates/**
+  - 提供项目初始化模板
+  - 帮助快速建立标准项目结构
+
+- **Software Projects**
+  - 实际开发项目
+  - 保持独立代码和项目上下文
+
+## AI 辅助开发流程
+
+推荐的软件开发流程：
+
+```mermaid
+flowchart LR
+
+A[需求分析]
+-->B[PROJECT_BRIEF]
+
+B
+-->C[AI Agent 规划]
+
+C
+-->D[实现开发]
+
+D
+-->E[测试验证]
+
+E
+-->F[文档同步]
+
+F
+-->G[项目维护]
+```
+
+核心理念：
+
+```
+上下文
+ ↓
+规则
+ ↓
+规划
+ ↓
+实现
+ ↓
+验证
+```
+
+AI Agent 不只是生成代码，而是在结构化流程中参与软件工程。
 
 ## 维护
 
