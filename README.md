@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![AI Agent](https://img.shields.io/badge/AI-Agent_Framework-purple.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/LinksOnlining/Codex-Development-Framework)]()
 # Codex 中央开发规范库
 
 本目录是所有软件项目共用的只读规范库与文档模板库，不是可直接开发或整目录复制的项目骨架。
